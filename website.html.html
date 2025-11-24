@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nước rửa chén sinh học — Bồ Hòn & Tắc</title>
+  <style>
+    :root{
+      --green:#2f7a4a;
+      --lime:#f3d86b;
+      --accent:#ff9f43;
+      --bg:#fbfdfb;
+      --card:#ffffff;
+      --muted:#6b6b6b;
+      --glass: rgba(255,255,255,0.6);
+      --radius:18px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#fbfff7 0%, #f6fff9 100%);color:#123;}
+    header{
+      display:flex;align-items:center;justify-content:space-between;padding:20px 28px;background:transparent;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--green),#6cc07a);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(47,122,74,0.18)}
+    .logo svg{width:34px;height:34px;filter:drop-shadow(0 3px 6px rgba(0,0,0,0.08))}
+    .brand h1{font-size:18px;margin:0}
+    .brand p{margin:0;font-size:12px;color:var(--muted)}
+    nav a{margin-left:18px;text-decoration:none;color:var(--green);font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 6vw}
+    .hero-left{max-width:760px}
+    .eyebrow{display:inline-block;background:linear-gradient(90deg,var(--lime),var(--accent));padding:6px 12px;border-radius:999px;font-weight:700;color:#2b2b2b;margin-bottom:14px}
+    .headline{font-size:40px;line-height:1.05;margin:0 0 14px}
+    .lead{color:var(--muted);margin-bottom:20px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--green);color:#fff}
+    .btn-outline{background:transparent;border:2px solid var(--green);color:var(--green)}
+
+    .hero-right{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));border-radius:20px;padding:18px;box-shadow:0 10px 30px rgba(15,40,20,0.06)}
+    .product-card{display:flex;gap:12px;align-items:center}
+    .bottle{width:120px;height:160px;border-radius:20px;background:linear-gradient(180deg,#fff 0%,#f0fff1 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 20px rgba(47,122,74,0.08);position:relative}
+    .bottle:after{content:'';position:absolute;bottom:10px;left:12px;right:12px;height:6px;background:linear-gradient(90deg,rgba(47,122,74,0.06),rgba(47,122,74,0.02));border-radius:6px}
+    .price{font-weight:800;font-size:20px;margin:0}
+    .meta{font-size:13px;color:var(--muted)}
+
+    /* features */
+    .features{display:flex;gap:18px;padding:28px 6vw}
+    .feature{flex:1;background:var(--card);padding:18px;border-radius:14px;box-shadow:0 8px 22px rgba(10,30,12,0.04)}
+    .feature h3{margin:8px 0}
+
+    /* process circular flow */
+    .flow{padding:28px 6vw;display:flex;justify-content:center}
+    .flow-wrap{display:flex;gap:28px;align-items:center}
+    .circle{width:160px;height:160px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#fff,#f7fff7);box-shadow:0 12px 30px rgba(20,80,40,0.07);position:relative;padding:18px;text-align:center}
+    .circle svg{width:48px;height:48px}
+    .arrow{font-size:28px;color:var(--muted);}
+
+    /* details */
+    .details{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:20px 6vw 60px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(10,30,12,0.04)}
+
+    footer{padding:28px 6vw;background:linear-gradient(180deg, rgba(47,122,74,0.03), transparent)}
+    .foot-grid{display:flex;justify-content:space-between;align-items:center;gap:20px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .hero-right{order:2}
+      .brand p{display:none}
+      .features{flex-direction:column}
+      .details{grid-template-columns:1fr}
+      .flow-wrap{flex-direction:column}
+    }
+
+    /* small touches */
+    .tag{display:inline-block;padding:6px 10px;background:linear-gradient(90deg,var(--lime),#fff4d6);border-radius:999px;font-weight:700}
+    input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #e7efe7}
+  </style>
+</head>
+<body>
+  <header>
+     <img src="logo_converted.png.png" alt="SpringRise Logo" class="logo">
+
+
+        <h1>SpringRise – Nước Rửa Chén Sinh Học</h1>
+        <p class="tagline">Gọn nhẹ – Tiện lợi – Dung tích 50–150ml, lý tưởng cho du lịch & đi xa</p>
+    </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <span class="eyebrow">100% Sinh học • Không hóa chất độc hại</span>
+        <h2 class="headline">Nước rửa chén từ <span style="color:var(--green)">Bồ Hòn</span> & <span style="color:var(--accent)">Tắc</span> — sạch nhanh, an toàn cho da tay</h2>
+        <p class="lead">Kết hợp tinh chất quả bồ hòn tự nhiên với vỏ tắc giàu tinh dầu tạo nên công thức làm sạch mạnh mẽ nhưng dịu nhẹ cho da tay, phân hủy sinh học hoàn toàn, phân hủy nhanh trong môi trường.</p>
+        <div class="cta">
+         
+          <button class="btn btn-outline">Tìm hiểu thêm</button>
+        </div>
+
+        <div style="margin-top:22px;display:flex;gap:10px;align-items:center">
+          <div style="background:var(--glass);padding:8px;border-radius:10px">💧 Độ pH: ~7 (dịu nhẹ)</div>
+          <div style="background:var(--glass);padding:8px;border-radius:10px">🌿 Thành phần: Bồ hòn, vỏ tắc, nước, men vi sinh</div>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="product-card">
+          <div class="bottle" role="img" aria-label="chai nước rửa chén">
+            <!-- bottle illustration -->
+            <svg viewBox="0 0 64 96" width="84" height="120" xmlns="http://www.w3.org/2000/svg">
+              <rect x="18" y="12" width="28" height="66" rx="8" fill="#ffffff" stroke="#dfefe0"/>
+              <rect x="26" y="4" width="12" height="10" rx="3" fill="#fff" />
+              <circle cx="32" cy="46" r="14" fill="url(#g)" />
+              <defs>
+                <radialGradient id="g" cx="0.5" cy="0.4">
+                  <stop offset="0%" stop-color="#fff" />
+                  <stop offset="100%" stop-color="#e6fff0" />
+                </radialGradient>
+              </defs>
+            </svg>
+          </div>
+          <div>
+            <p class="price">₫25.000 / 150ml</p>
+            <p class="meta">Tự nhiên • An toàn cho da tay • Hương tắc nhẹ nhàng</p>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;font-size:14px;color:var(--muted)">
+          <strong>Ưu đãi</strong>: Mua 1 tặng 1 (áp dụng khi mua 1 chai 150 mL)
+        </div>
+      </aside>
+    </section>
+
+    <section class="features">
+      <div class="feature">
+        <h3>Vì sao chọn Bồ Hòn?</h3>
+        <p>Bồ hòn chứa saponin — chất tạo bọt tự nhiên, có khả năng hòa tan dầu mỡ hiệu quả mà không cần dùng chất tẩy mạnh. Là nguồn gốc thực vật, dễ phân hủy sinh học.</p>
+      </div>
+      <div class="feature">
+        <h3>Tác dụng của vỏ tắc</h3>
+        <p>Vỏ tắc giàu tinh dầu có tác dụng kháng khuẩn, khử mùi, và tạo hương tự nhiên. Kết hợp với bồ hòn giúp sản phẩm vừa sạch, vừa thơm.</p>
+      </div>
+      <div class="feature">
+        <h3>An toàn cho da, bảo vệ môi trường</h3>
+        <p>Công thức cân bằng pH, không chứa paraben, sulfate hay chất tẩy rửa tổng hợp, phù hợp với da nhạy cảm, không chứa các chất độc hại gây ô nhiễm môi trường.</p>
+      </div>
+    </section>
+
+    <section id="quytrinh" class="flow">
+      <div class="flow-wrap" aria-hidden="false">
+        <div class="circle">
+          <img src="https://th.bing.com/th/id/OIP.YEcOSLQZgddOp-Ek51A6mwHaHa?w=190&h=191&c=7&r=0&o=7&pid=1.7&rm=3" alt="Thu hoạch"
+              style="width:66px; height:66px; object-fit:contain; margin-bottom:8px;">    
+          <img src="https://th.bing.com/th/id/OIP.e6yg6oHxFhJ4oLaffGP7mQHaFH?w=287&h=198&c=7&r=0&o=7&pid=1.7&rm=3" alt="Thu hoạch"
+              style="width:66px; height:66px; object-fit:contain; margin-bottom:8px;">    
+          <strong>Thu hoạch</strong>
+          <div style="font-size:13px;color:var(--muted);margin-top:6px">Bồ hòn khô đã tách vỏ & vỏ tắc tươi</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="circle">
+         <img src="https://th.bing.com/th?q=Tinh+D%e1%ba%a7u+Tr%c3%a0m+Tr%c3%a0&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&pid=InlineBlock&rm=3&mkt=en-WW&cc=VN&setlang=en&adlt=moderate&t=1&mw=247" alt="Chiết xuất"
+              style="width:66px; height:66px; object-fit:contain; margin-bottom:8px;">    
+          <img src="https://th.bing.com/th/id/OIP.W_L3XPlVZbb2X0_1OxIO5gHaFT?w=248&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Chiết xuất"
+              style="width:66px; height:66px; object-fit:contain; margin-bottom:8px;">    
+          <strong>Chiết xuất</strong>
+          <div style="font-size:13px;color:var(--muted);margin-top:6px">Ngâm, chiết xuất saponin và tinh dầu</div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="circle">
+          <img src="https://th.bing.com/th/id/OIP.cPJk7lRE2M6TkDgFItSHCgHaET?w=108&h=108&c=1&bgcl=467a1b&r=0&o=7&pid=ImgRC&rm=3" alt="Hoàn thiện"
+              style="width:66px; height:66px; object-fit:contain; margin-bottom:8px;">
+          <img src="https://th.bing.com/th/id/OIP.iM-vsCxGAHRiHYYX_ZXZUgHaHu?w=130&h=150&c=6&o=7&pid=1.7&rm=3" alt="Hoàn thiện"
+              style="width:66px; height:66px; object-fit:contain; margin-bottom:8px;">
+          <strong>Hoàn thiện</strong>
+          <div style="font-size:13px;color:var(--muted);margin-top:6px">Pha trộn, kiểm nghiệm, đóng chai</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="details">
+      <div class="card">
+        <h3>Cách dùng nhanh</h3>
+        <ol>
+          <li>Tráng sạch chén, đổ nước vào và quậy với khoảng 25 mL nước rửa chén</li>
+          <li>Đối với vết dầu mỡ nhiều: dùng trực tiếp 1–2 giọt lên miếng rửa.</li>
+          <li>Bảo quản nơi khô mát, tránh ánh nắng trực tiếp.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>CAM KẾT</h3>
+        <p>Cam kết không chứa chất bảo quản độc hại, an toàn cho môi trường. Sản phẩm được thử nghiệm độ phân hủy sinh học và pH để đảm bảo an toàn cho gia đình.</p>
+      </div>
+
+      <div class="card">
+        <h3>Gói sản phẩm</h3>
+        <p>Chai 150ml — 25.000₫ • Chai 50ml — 10.000₫ </p>
+      </div>
+      <div class="card" id="lienhe">
+        <h3>Liên hệ đặt hàng</h3>
+        <form onsubmit="event.preventDefault();alert('Cám ơn! Chúng tôi sẽ liên hệ bạn sớm.');">
+          <input type="text" placeholder="Họ tên" required>
+          <input type="tel" placeholder="Số điện thoại" required style="margin-top:8px">
+          <textarea placeholder="Ghi chú (địa chỉ, số lượng...)" rows="3" style="margin-top:8px"></textarea>
+          <button class="btn btn-primary" style="margin-top:10px">Gửi</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot-grid">
+      <div>
+        <strong>Nước rửa chén Bồ Hòn & Tắc</strong>
+        <div style="color:var(--muted)">SĐT: 090-xxx-xxxx • Email: abcdefg</div>
+      </div>
+      <div style="text-align:right;color:var(--muted)">© 2025 — Sản phẩm thiên nhiên • Sáng tạo vì môi trường</div>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
+
+
